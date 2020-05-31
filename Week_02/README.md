@@ -7,6 +7,7 @@
 
   * 解决hash碰撞的方法一般有：开放寻址法和链表法。
   * [v8中HashTable代码](https://github.com/v8/v8/commit/0e8e0030775518b69eb8522823ea3754e6bddc69#diff-2b73f7df77a2d3cc8eb1a03e93b2d5d8)
+  * [hashTable.js](./hashTable.js)
 
 
 ### 二叉树
