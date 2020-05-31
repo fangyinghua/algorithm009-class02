@@ -73,7 +73,7 @@
 * 特点：找到一堆数中的最大或者最小值的数据结构;
 * 分类：大顶堆和小顶堆;
 * 常见堆：二叉堆、斐波那契堆;
-* 常见堆发操作和对应的复杂度
+* 常见堆发操作和对应的复杂度<br/>
   ![Image](./img/heap/1.png)
 
 * 二叉堆
@@ -88,16 +88,18 @@
       * 索引为i的右child索引为(2*+2);
       * 索引为i的父节点的索引为floor((i-1)/2);
       * 例子
+        <br/>
         ![Image](./img/heap/2.png)
 
     * insert （heapifyUp）O(logN)
       1. 新元素一律先插入到堆的尾部;
       2. 依次向上调整整个堆的结构（一直到根节点即可）（如果大于父节点就和父节点交互位置）
       3. 例子
-       ![Image](./img/heap/3.png)
-       ![Image](./img/heap/4.png)
-       ![Image](./img/heap/5.png)
-       ![Image](./img/heap/6.png)
+        <br/>
+       ![Image](./img/heap/3.jpg)<br/>
+       ![Image](./img/heap/4.png)<br/>
+       ![Image](./img/heap/5.png)<br/>
+       ![Image](./img/heap/6.jpg)<br/>
        4. 总结二叉堆插入操作
          * 先将元素插入到堆的尾部，然后再和父节点进行比较如果大于就交互位置，一直遇到小于它的或者根节点为止；
     * delete Max 删除堆顶操作 HeapifyDown O(logN)
