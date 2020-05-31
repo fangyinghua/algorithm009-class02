@@ -94,12 +94,11 @@
     * insert （heapifyUp）O(logN)
       1. 新元素一律先插入到堆的尾部;
       2. 依次向上调整整个堆的结构（一直到根节点即可）（如果大于父节点就和父节点交互位置）
-      3. 例子
-        <br/>
-       ![Image](./img/heap/3.jpg)<br/>
-       ![Image](./img/heap/4.png)<br/>
-       ![Image](./img/heap/5.png)<br/>
-       ![Image](./img/heap/6.jpg)<br/>
+      3. 例子<br/>
+       ![Image](./img/heap/3.jpg)
+       ![Image](./img/heap/4.png)
+       ![Image](./img/heap/5.png)
+       ![Image](./img/heap/6.jpg)
        4. 总结二叉堆插入操作
          * 先将元素插入到堆的尾部，然后再和父节点进行比较如果大于就交互位置，一直遇到小于它的或者根节点为止；
     * delete Max 删除堆顶操作 HeapifyDown O(logN)
