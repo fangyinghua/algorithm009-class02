@@ -119,3 +119,17 @@
    * 通过添加索引维度（空间换时间），降低查询的时间复杂度。（ O(n)降 O(logn) ）。
    * 因为需要维护索引，所以增加、删除的时间复杂度降到。（O(1) 升到 O（logn））。
 
+
+### 栈、队列
+
+* stack：先入后出  --> 添加、删除皆为O(1) / 查询 O(n)
+[基于链表实现的栈](./StackBasedOnLinkedList.js)
+* queue：先入先出  --> 添加、删除皆为O(1) / 查询 O(n)
+* Double-End Queue 双端队列
+[!Image](./img/double-end-queue.png)
+* Priority Queue --> 优先队列
+   1. 插入操作:O(1);
+   2. 取出操作:O(logN) -- 按照元素的优先级取出
+   3. 底层具体数据的数据结构比较多样和复杂：heap(堆)、BST(二叉搜索树)、treap
+
+[通用的数据结构复杂度](./img/common_data_structure_operations.png)
