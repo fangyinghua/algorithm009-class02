@@ -11,19 +11,13 @@ var search = function(nums, target) {
       if (nums[mid] == target) {
           return mid;
       }     
-      if (nums[left]<=nums[mid]) {//单调递增  
-          if (target >= nums[left] && target < nums[mid]) {
-             right = mid - 1;
-          } else {
-             left = mid + 1;
-          }
-      } else {
-          if (target > nums[mid] && target <= nums[right]) {
-              left = mid + 1;
-          } else {
-             right = mid - 1;
-          }
+      if (nums[left]<=nums[mid] && (target>nums[mid] || target<nums[left])) {//单调递增  
+        left=mid+1;
+      } else if(target>nums[mid] && target<nums[left]){
+        right=mid+1;
+      }else{
+        right=mid;
       }
   }
-  return -1;
+  return (left===right && nums[left]===target)?left:-1;
 };
