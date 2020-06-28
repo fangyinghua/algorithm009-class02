@@ -3,50 +3,50 @@
 1. 重复子问题;
 2. 最优子结构; 通过子问题的最优解-->问题的最优解;
 
-##### Fibonacci数列
+### 动态规划例子 
 
-```JS
-/** 递归 2^n  时间复杂度 指数级
- * @param {number} N
- * @return {number}
- */
-var fib = function(N) {
-    return N<=1?N:fib(N-1)+fib(N-2);
-};
+* Fibonacci数列
+    ```JS
+    /** 递归 2^n  时间复杂度 指数级
+     * @param {number} N
+     * @return {number}
+     */
+    var fib = function(N) {
+        return N<=1?N:fib(N-1)+fib(N-2);
+    };
 
-/** 记忆化搜索 O（n） 时间复杂度 指数级
- * @param {number} N
- * @return {number}
- */
-var fib = function(N) {  
-    let res=Array(N+1).fill(0);
-    const fibber=(n)=>{       
-        if(n<=1){
-            return n;
-        }        
-        if(res[n]===0){  
-            res[n]=fibber(n-1)+fibber(n-2);          
-        }     
-        return res[n];
-    }   
-   return fibber(N,res);
-};
+    /** 记忆化搜索 O（n） 时间复杂度 指数级
+     * @param {number} N
+     * @return {number}
+     */
+    var fib = function(N) {  
+        let res=Array(N+1).fill(0);
+        const fibber=(n)=>{       
+            if(n<=1){
+                return n;
+            }        
+            if(res[n]===0){  
+                res[n]=fibber(n-1)+fibber(n-2);          
+            }     
+            return res[n];
+        }   
+    return fibber(N,res);
+    };
 
-/** BottomUp 自底向上 循环
- * @param {number} N
- * @return {number}
- */
-var fib = function(N) {
-    let res=Array(N).fill(0);
-    res[0]=0; 
-    res[1]=1;
-    for(let n=2;n<=N;++n){
-        res[n]=res[n-1]+res[n-2];
-    }
-    return res[N];
-};
-
-```
+    /** BottomUp 自底向上 循环
+     * @param {number} N
+     * @return {number}
+     */
+    var fib = function(N) {
+        let res=Array(N).fill(0);
+        res[0]=0; 
+        res[1]=1;
+        for(let n=2;n<=N;++n){
+            res[n]=res[n-1]+res[n-2];
+        }
+        return res[N];
+    };
+    ```
 
 
 
