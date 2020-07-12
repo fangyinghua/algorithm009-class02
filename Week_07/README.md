@@ -84,6 +84,9 @@ class UnionFind{
 * 双向BFS
 * 启发式搜索(A*)
 
+* 双向BFS模板
+[!TwoEndedBFS](./TwoEndedBFS.js)
+
 * 总结
     1. 朴实搜索 -->(初级搜索)
     2. 优化方式： 不重复、剪枝
