@@ -21,6 +21,11 @@ function bubbleSort(arr){
     return arr;
 }
 
+
+function quickSort(arr,left,right){
+
+
+}
 /**
  * 快排 不稳定
  * 平均复杂度 O(login(n))
