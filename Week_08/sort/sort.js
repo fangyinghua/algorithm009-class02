@@ -2,36 +2,46 @@
 
 /***
  * 冒泡排序 （稳定排序）
- * 交换排序
+ * 
+ *  嵌套循环 每次查看相邻的元素 如果逆序 则交换位置
  */
 function bubbleSort(arr){
     let len=arr.length;
-    if(len>1){
-        for(let i=0;i<len;++i){
-           for(let j=0;j<len-1-i;++j){
-                if(arr[j]>arr[j+1]){
-                    arr[j]=arr[j]^arr[j+1];
-                    arr[j+1]=arr[j+1]^arr[j];
-                    arr[j]=arr[j]^arr[j+1];
-                }
-           }
+    for(let i=0;i<len;++i){
+        let flag=false;
+        for(let j=0;j<len-i-1;++j){
+            if(arr[j]>arr[j+1]){
+                arr[j]=arr[j]^arr[j+1];
+                arr[j+1]=arr[j+1]^arr[j];
+                arr[j]=arr[j]^arr[j+1];
+                flag=true;
+            }
         }
-
+        if(!flag){
+            break;
+        }
     }
     return arr;
 }
 
-
-function quickSort(arr,left,right){
-
-
-}
 /**
  * 快排 不稳定
  * 平均复杂度 O(login(n))
  * 采用分治的方法
- * 
+ *  将待排记录分割成独立的两部分；
  */
+
+ function quickSort(arr,left=0,right){
+
+    let len=arr.length,partitionIndex;//partitionIndex 分区index
+    right=typeof right!='number'?len-1:right;
+
+    if(left<right){
+        partitionIndex=parttition();
+    }
+
+    return arr;
+ }
 function quickSort(arr,left,right){
     let len=arr.length; 
         var partitionIndex;
